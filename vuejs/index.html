@@ -16,17 +16,26 @@
         </header>
         <main>
             <div>
-                <input type="text" id="itemForm" v-on:keypress.enter="addItem">
-                <button v-on:click="addItem">Add Dinosaur</button>
+                <input type="text" id="species-name" placeholder="Name">
+                <input type="number" id="species-weight" placeholder="Weight">
+                <input type="number" id="species-quantity" placeholder="Quantity">
+                <button v-on:click="addSpecies">Add Dinosaur</button>
             </div>
             <div v-html="description"></div>
             <ul id="dinosaursList">
                 <li v-for="(dino, index) in dinos">
-                    <button v-on:click="deleteItem(index)">X</button>
+                    <button v-on:click="addDino(index)">Make babies</button>
                     <p>{{ dino.name | capitalize }}</p>
-                    <p>The {{ dino.name | undercase}} weighs {{ dino.weight }}</p><br>
+                    {{ dino.quantity }}
+                    <button v-on:click="killDino(index)">Kill one</button>
+                    <p>The {{ dino.name | undercase}} weighs {{ dino.weight }} kg</p><br>
                     <a href="">{{ dino.name | undercase | url }}</a>
+                    <button v-on:click="deleteSpecies(index)">Make Extinct</button>
                 </li>
+            </ul>
+            <ul>
+                <li>Total Dinosaurs {{ totalDinosaurs }} <span>Updated {{ dinosUpdated }}</span></li>
+                <li>Total Species: {{ totalSpecies }} <span>Updated {{ speciesUpdated }}</span></li>
             </ul>
         </main>
     </div>

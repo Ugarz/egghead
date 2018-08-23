@@ -8,23 +8,36 @@ var card = new Vue({
     el: "#card",
     data: {
         title: "Dinosaurs",
+        dinosUpdated: 0,
+        speciesUpdated: 0,
         dinos: [
-            { name: "Velociraptor", weight: "15 kg" },
-            { name: "Triceratops", weight: "6.000 kg" },
-            { name: "Stegosaurus", weight: "2.500 kg" },
+            { name: "Velociraptor", weight: 15, quantity: 430 },
+            { name: "Triceratops", weight: 6000, quantity: 341 },
+            { name: "Stegosaurus", weight: 2500, quantity: 190 },
         ],
         description: "<strong>Dinosaurs</strong> are very diverse group of animals of the clade <em>Dinosauria</em> that first appeared during the Triassic period."
     },
     methods: {
-        addItem: function() {
-            var input = document.getElementById('itemForm');
-            if(input.value !== ''){
-                this.dinos.push({ name: input.value })
-                input.value = "";
+        addSpecies: function() {
+            var speciesName = document.getElementById('species-name');
+            var speciesWeight = document.getElementById('species-weight');
+            var speciesQuantity = document.getElementById('species-quantity');
+            if (speciesName.value !== ''){
+                this.dinos.push({ name: speciesName.value, weight: speciesWeight.value || 0, quantity: speciesQuantity.value || 0 })
+                console.log(this.dinos[3])
+                speciesName.value = "";
+                speciesWeight.value = "";
+                speciesQuantity.value = "";
             }
         },
-        deleteItem: function(index) {
+        deleteSpecies: function(index) {
              this.dinos.splice(index, 1)
+        },
+        addDino: function (index) {
+            this.dinos[index].quantity += 1
+        },
+        killDino: function (index) {
+            this.dinos[index].quantity -= 1
         }
     },
     filters: {
@@ -41,6 +54,21 @@ var card = new Vue({
         url: function(value){
             value = value.toString();
             return "http://en.wikipedia.org/wiki/" + value;
+        }
+    },
+    computed: {
+        totalDinosaurs: function(){
+            this.dinosUpdated += 1;
+            var sum = 0;
+            var dinos = this.dinos;
+            for(var dino in dinos) {
+                sum += dinos[dino].quantity;
+            }
+            return sum;
+        },
+        totalSpecies: function(){
+            this.speciesUpdated += 1;
+            return this.dinos.length;
         }
     }
 })

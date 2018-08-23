@@ -12,6 +12,10 @@ main #card {
     justify-content: center;
 }
 
+#car input {
+    background-color: white;
+}
+
 #card ul#dinosaursList {
     list-style: none;
 }
