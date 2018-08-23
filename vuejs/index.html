@@ -4,20 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/index.css">
     <title>Vue test</title>
 </head>
 <body>
     <div id="card">
-        <header>{{ title }}</header>
-        <div>
-            <input type="text" id="itemForm" v-on:keypress.enter="addItem">
-            <button v-on:click="addItem">Add Dinosaur</button>
-        </div>
-        <div v-html="content"></div>
-        <ul v-for="(item, index) in items">
-            <button v-on:click="deleteItem(index)">X</button>
-            <li>{{ item.text }}</li>
-        </ul>
+        <header>
+            <h1>{{ title }}</h1>
+            <p><i>The only ones who used to have style</i></p>
+        </header>
+        <main>
+            <div>
+                <input type="text" id="itemForm" v-on:keypress.enter="addItem">
+                <button v-on:click="addItem">Add Dinosaur</button>
+            </div>
+            <div v-html="description"></div>
+            <ul id="dinosaursList">
+                <li v-for="(item, index) in items">
+                    <button v-on:click="deleteItem(index)">X</button>
+                    <p>{{ item.text }}</p>
+                </li>
+            </ul>
+        </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./assets/js/index.js"></script>

@@ -13,7 +13,7 @@ var card = new Vue({
             { text: "Triceratops" },
             { text: "Brutosaurus" },
         ],
-        content: "<strong>Dinosaurs</strong> are very diverse group of animals of the clade <em>Dinosauria</em> that first appeared during the Triassic period."
+        description: "<strong>Dinosaurs</strong> are very diverse group of animals of the clade <em>Dinosauria</em> that first appeared during the Triassic period."
     },
     methods: {
         addItem: function() {
