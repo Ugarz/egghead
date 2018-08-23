@@ -9,7 +9,15 @@
 <body>
     <div id="card">
         <header>{{ title }}</header>
+        <div>
+            <input type="text" id="itemForm" v-on:keypress.enter="addItem">
+            <button v-on:click="addItem">Add Dinosaur</button>
+        </div>
         <div v-html="content"></div>
+        <ul v-for="(item, index) in items">
+            <button v-on:click="deleteItem(index)">X</button>
+            <li>{{ item.text }}</li>
+        </ul>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./assets/js/index.js"></script>
