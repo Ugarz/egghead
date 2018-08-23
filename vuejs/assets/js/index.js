@@ -24,7 +24,6 @@ var card = new Vue({
             var speciesQuantity = document.getElementById('species-quantity');
             if (speciesName.value !== ''){
                 this.dinos.push({ name: speciesName.value, weight: speciesWeight.value || 0, quantity: speciesQuantity.value || 0 })
-                console.log(this.dinos[3])
                 speciesName.value = "";
                 speciesWeight.value = "";
                 speciesQuantity.value = "";
