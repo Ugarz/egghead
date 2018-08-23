@@ -11,7 +11,7 @@
 <body>
     <div id="card">
         <header>
-            <h1>{{ title }}</h1>
+            <h1>{{ title | capitalize }}</h1>
             <p><i>The only ones who used to have style</i></p>
         </header>
         <main>
@@ -21,9 +21,11 @@
             </div>
             <div v-html="description"></div>
             <ul id="dinosaursList">
-                <li v-for="(item, index) in items">
+                <li v-for="(dino, index) in dinos">
                     <button v-on:click="deleteItem(index)">X</button>
-                    <p>{{ item.text }}</p>
+                    <p>{{ dino.name | capitalize }}</p>
+                    <p>The {{ dino.name | undercase}} weighs {{ dino.weight }}</p><br>
+                    <a href="">{{ dino.name | undercase | url }}</a>
                 </li>
             </ul>
         </main>
