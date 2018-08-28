@@ -19,7 +19,7 @@
                 <p class="subtitle"><i>The only ones who used to have style</i></p>
             </header>
             <main>
-                <form>
+                <form v-on:submit.prevent="addDino">
                     <div class="field">
                         <label class="label">Name your Dinosaur</label>
                         <div class="control has-icons-left has-icons-right">

@@ -6,3 +6,4 @@ Welcome to my sandbox on egghead.
 - [x] [Episode 2 - Create a List Component in Vue.js](https://egghead.io/lessons/vue-js-create-a-list-component-in-vue-js)
 - [x] [Episode 3 - Create Filters in Vue.js](https://egghead.io/lessons/vue-js-use-vue-js-component-computed-properties)
 - [x] [Episode 4 - Use Vue.js Component Computed Properties](https://egghead.io/lessons/vue-js-use-vue-js-component-computed-properties)
+- [ ] [Episode 5 - Use Vue.js watchers to respond to async updates](https://egghead.io/lessons/vue-js-use-vue-js-watchers-to-respond-to-async-updates)
