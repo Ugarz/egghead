@@ -11,19 +11,24 @@ var card = new Vue({
         dinosUpdated: 0,
         speciesUpdated: 0,
         dinos: [
-            { name: "Velociraptor", weight: 15, quantity: 430 },
-            { name: "Triceratops", weight: 6000, quantity: 341 },
-            { name: "Stegosaurus", weight: 2500, quantity: 190 },
+            { name: "Velociraptor", weight: 15, quantity: 1 },
+            { name: "Triceratops", weight: 6000, quantity: 2 },
+            { name: "Stegosaurus", weight: 2500, quantity: 1 },
         ],
         description: "<strong>Dinosaurs</strong> are very diverse group of animals of the clade <em>Dinosauria</em> that first appeared during the Triassic period."
     },
     methods: {
-        addSpecies: function() {
+        addSpecies: function(e) {
+            e.preventDefault()
             var speciesName = document.getElementById('species-name');
             var speciesWeight = document.getElementById('species-weight');
             var speciesQuantity = document.getElementById('species-quantity');
             if (speciesName.value !== ''){
-                this.dinos.push({ name: speciesName.value, weight: speciesWeight.value || 0, quantity: speciesQuantity.value || 0 })
+                this.dinos.push({
+                    name: speciesName.value || 'Robert',
+                    weight: speciesWeight.value || 40,
+                    quantity: speciesQuantity.value || 1300
+                })
                 speciesName.value = "";
                 speciesWeight.value = "";
                 speciesQuantity.value = "";
@@ -33,10 +38,15 @@ var card = new Vue({
              this.dinos.splice(index, 1)
         },
         addDino: function (index) {
-            this.dinos[index].quantity += 1
+            this.dinos[index].quantity++
         },
         killDino: function (index) {
-            this.dinos[index].quantity -= 1
+            this.dinos[index].quantity--
+        },
+        cleanForm: function() {
+            speciesName.value = "";
+            speciesWeight.value = "";
+            speciesQuantity.value = "";
         }
     },
     filters: {
@@ -57,16 +67,17 @@ var card = new Vue({
     },
     computed: {
         totalDinosaurs: function(){
-            this.dinosUpdated += 1;
-            var sum = 0;
-            var dinos = this.dinos;
+            this.dinosUpdated++;
+            let sum = 0;
+            let dinos = this.dinos;
+
             for(var dino in dinos) {
                 sum += dinos[dino].quantity;
             }
             return sum;
         },
         totalSpecies: function(){
-            this.speciesUpdated += 1;
+            this.speciesUpdated++;
             return this.dinos.length;
         }
     }

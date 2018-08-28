@@ -1,29 +1,12 @@
 body {
-    background-color: gainsboro;
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-main #card {
+#card {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-#car input {
-    background-color: white;
-}
-
-#card ul#dinosaursList {
-    list-style: none;
-}
-
-#card ul#dinosaursList li {
-    display: flex;
-}
-
-#card ul#dinosaursList li p {
-    margin: 1em;
 }

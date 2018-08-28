@@ -5,40 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <!-- Responsive tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vue test</title>
 </head>
 <body>
-    <div id="card">
-        <header>
-            <h1>{{ title | capitalize }}</h1>
-            <p><i>The only ones who used to have style</i></p>
-        </header>
-        <main>
-            <div>
-                <input type="text" id="species-name" placeholder="Name">
-                <input type="number" id="species-weight" placeholder="Weight">
-                <input type="number" id="species-quantity" placeholder="Quantity">
-                <button v-on:click="addSpecies">Add Dinosaur</button>
-            </div>
-            <div v-html="description"></div>
-            <ul id="dinosaursList">
-                <li v-for="(dino, index) in dinos">
-                    <button v-on:click="addDino(index)">Make babies</button>
-                    <p>{{ dino.name | capitalize }}</p>
-                    {{ dino.quantity }}
-                    <button v-on:click="killDino(index)">Kill one</button>
-                    <p>The {{ dino.name | undercase}} weighs {{ dino.weight }} kg</p><br>
-                    <a href="">{{ dino.name | undercase | url }}</a>
-                    <button v-on:click="deleteSpecies(index)">Make Extinct</button>
-                </li>
-            </ul>
-            <ul>
-                <li>Total Dinosaurs {{ totalDinosaurs }} <span>Updated {{ dinosUpdated }}</span></li>
-                <li>Total Species: {{ totalSpecies }} <span>Updated {{ speciesUpdated }}</span></li>
-            </ul>
-        </main>
-    </div>
+    <section id="card" class="section">
+        <div class="container">
+            <header>
+                <h1 class="title">{{ title | capitalize }}</h1>
+                <p class="subtitle"><i>The only ones who used to have style</i></p>
+            </header>
+            <main>
+                <form>
+                    <div class="field">
+                        <label class="label">Name your Dinosaur</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input class="input" type="text" id="species-name" placeholder="Name of the dinosaur you want to add">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </div>
+                        <div class="field">
+                            <label class="label">How much does he weighs ?</label>
+                            <div class="control">
+                                <input class="input" type="number" id="species-weight" placeholder="How much does he weighs ?">      
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">How much of them ?</label>
+                            <div class="control">
+                                <input class="input" type="number" id="species-quantity" placeholder="How much of them ?">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button class="button is-primary is-link" v-on:click="addSpecies">Add Dinosaur</button>
+                        </div>
+                        <div class="control">
+                            <button class="button is-text">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <p class="title">
+                            <div v-html="description"></div>
+                        </p>
+                        <p class="subtitle">Wikipedia</p>
+                    </div>
+                </div>
+
+                <table id="dinosaursList" class="table is-striped is-narrow is-hoverable is-fullwidth">
+                    <tbody v-for="(dino, index) in dinos">
+                        <tr>
+                            <th>
+                                <button class="button is-success" v-on:click="addDino(index)">+</button>
+                                {{ dino.name | capitalize }}
+                                <button class="button is-warning" v-on:click="killDino(index)">-</button>
+                            </th>
+                            <td>{{ dino.quantity }}</td>
+                            <td>The {{ dino.name | undercase}} weighs {{ dino.weight }} kg</td>
+                            <td><a href="">{{ dino.name | undercase | url }}</a></td>
+                            <td><button class="button is-danger" v-on:click="deleteSpecies(index)">Make Extinct</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="notification">
+                    <button class="delete"></button>
+                    <ul>
+                        <li>Total Dinosaurs {{ totalDinosaurs }} <span>Updated {{ dinosUpdated }}</span></li>
+                        <li>Total Species: {{ totalSpecies }} <span>Updated {{ speciesUpdated }}</span></li>
+                    </ul> 
+                </div>
+            </main>
+        </div>
+    </section>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
