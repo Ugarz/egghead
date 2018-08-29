@@ -14,4 +14,8 @@ Welcome to my sandbox on egghead.
 ## Canvas project
 - [x] [Episode 1 - Draw in HTML Canvas](https://egghead.io/lessons/html-5-draw-in-html-canvas)
 - [x] [Episode 2 - Add color to graphics using HTML Canvas](https://egghead.io/lessons/html-5-add-color-to-graphics-using-html-canvas)
-- [ ] [Episode 3 - Specifying Height and Width on the Canvas Element](https://egghead.io/lessons/html-5-specifying-height-and-width-on-the-canvas-element)
+- [x] [Episode 3 - Specifying Height and Width on the Canvas Element](https://egghead.io/lessons/html-5-specifying-height-and-width-on-the-canvas-element)
+- [x] [Episode 4 - Draw circles in HTML Canvas using .arc](https://egghead.io/lessons/html-5-draw-circles-in-html-canvas-using-arc)
+- [ ] [Episode 5 - Add strokes to circles using HTML Canvas](https://egghead.io/lessons/html-5-add-strokes-to-circles-using-html-canvas)
+- [ ] [Episode 6 - Use HTML Canvas `arcTo`, `moveTo`, and `lineTo` to draw a piece of a pie chart](https://egghead.io/lessons/html-5-use-html-canvas-arcto-moveto-and-lineto-to-draw-a-piece-of-a-pie-chart)
+- [ ] [Episode 7 - Add click interaction to HTML Canvas using JavaScript events](https://egghead.io/lessons/html-5-add-click-interaction-to-html-canvas-using-javascript-events)
