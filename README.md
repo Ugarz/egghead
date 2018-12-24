@@ -29,4 +29,5 @@ Welcome to my sandbox on egghead.
 - [x] [Create a Resolved Promise in JavaScript with Promise.resolve()](https://egghead.io/lessons/javascript-create-a-resolved-promise-in-javascript-with-promise-resolve)
 - [x] [Create a New Promise in JavaScript with the Promise Constructor](https://egghead.io/lessons/javascript-create-a-new-promise-in-javascript-with-the-promise-constructor)
 - [x] [Convert a Callback-Based JavaScript Function to a Promise-Based One](https://egghead.io/lessons/javascript-convert-a-callback-based-javascript-function-to-a-promise-based-one)
-- [ ] [Wait for the Fastest JavaScript Promise to Settle with Promise.race()](https://egghead.io/lessons/javascript-wait-for-the-fastest-javascript-promise-to-settle-with-promise-race)
+- [x] [Wait for the Fastest JavaScript Promise to Settle with Promise.race()](https://egghead.io/lessons/javascript-wait-for-the-fastest-javascript-promise-to-settle-with-promise-race)
+- [ ] [Wait for Multiple JavaScript Promises to Settle with Promise.all()](https://egghead.io/lessons/javascript-wait-for-the-fastest-javascript-promise-to-settle-with-promise-race)
