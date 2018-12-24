@@ -31,4 +31,4 @@ Welcome to my sandbox on egghead.
 - [x] [Convert a Callback-Based JavaScript Function to a Promise-Based One](https://egghead.io/lessons/javascript-convert-a-callback-based-javascript-function-to-a-promise-based-one)
 - [x] [Wait for the Fastest JavaScript Promise to Settle with Promise.race()](https://egghead.io/lessons/javascript-wait-for-the-fastest-javascript-promise-to-settle-with-promise-race)
 - [x] [Wait for Multiple JavaScript Promises to Settle with Promise.all()](https://egghead.io/lessons/javascript-wait-for-the-fastest-javascript-promise-to-settle-with-promise-race)
-- [ ] [Await a JavaScript Promise in an async Function with the await Operator](https://egghead.io/lessons/javascript-wait-for-the-fastest-javascript-promise-to-settle-with-promise-race)
+- [x] [Await a JavaScript Promise in an async Function with the await Operator](https://egghead.io/lessons/javascript-wait-for-the-fastest-javascript-promise-to-settle-with-promise-race)
