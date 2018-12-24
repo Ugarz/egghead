@@ -19,3 +19,8 @@ Welcome to my sandbox on egghead.
 - [x] [Episode 5 - Add strokes to circles using HTML Canvas](https://egghead.io/lessons/html-5-add-strokes-to-circles-using-html-canvas)
 - [x] [Episode 6 - Use HTML Canvas `arcTo`, `moveTo`, and `lineTo` to draw a piece of a pie chart](https://egghead.io/lessons/html-5-use-html-canvas-arcto-moveto-and-lineto-to-draw-a-piece-of-a-pie-chart)
 - [x] [Episode 7 - Add click interaction to HTML Canvas using JavaScript events](https://egghead.io/lessons/html-5-add-click-interaction-to-html-canvas-using-javascript-events)
+
+## Promises in js
+- [x] [Introduction to JavaScript Promises in Depth](https://egghead.io/lessons/javascript-introduction-to-javascript-promises-in-depth)
+- [x] [Create a Promise Chain in JavaScript with Promise.prototype.then()](https://egghead.io/lessons/javascript-create-a-promise-chain-in-javascript-with-promise-prototype-then)
+- [ ] [Catch Errors in a JavaScript Promise Chain with Promise.prototype.catch()](https://egghead.io/lessons/javascript-catch-errors-in-a-javascript-promise-chain-with-promise-prototype-catch)
