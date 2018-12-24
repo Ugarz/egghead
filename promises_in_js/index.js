@@ -10,10 +10,10 @@ function formatFilmData(films){
         .join('\n')
 }
 
-fetch(API_URL + 'films')
+fetch(API_URL + 'movies')
     .then(response => {
         if(!response.ok){
-            throw Error('Unsuccessful response')
+            return Promise.reject(new Error('Unsuccessful response'))
         }
         return response.json()
             .then(films => {

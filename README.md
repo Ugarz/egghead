@@ -25,4 +25,5 @@ Welcome to my sandbox on egghead.
 - [x] [Create a Promise Chain in JavaScript with Promise.prototype.then()](https://egghead.io/lessons/javascript-create-a-promise-chain-in-javascript-with-promise-prototype-then)
 - [x] [Catch Errors in a JavaScript Promise Chain with Promise.prototype.catch()](https://egghead.io/lessons/javascript-catch-errors-in-a-javascript-promise-chain-with-promise-prototype-catch)
 - [x] [Execute Cleanup Logic in a JavaScript Promise Chain with Promise.prototype.finally()](https://egghead.io/lessons/javascript-execute-cleanup-logic-in-a-javascript-promise-chain-with-promise-prototype-finally)
-- [ ][Create a Rejected Promise in JavaScript with Promise.reject()](https://egghead.io/lessons/javascript-create-a-rejected-promise-in-javascript-with-promise-reject)
+- [x] [Create a Rejected Promise in JavaScript with Promise.reject()](https://egghead.io/lessons/javascript-create-a-rejected-promise-in-javascript-with-promise-reject)
+- [ ] [Create a Resolved Promise in JavaScript with Promise.resolve()](https://egghead.io/lessons/javascript-create-a-resolved-promise-in-javascript-with-promise-resolve)
