@@ -11,9 +11,12 @@ function formatFilmData(films){
         .join('\n')
 }
 
-fetch(API_URL + 'films').then(response => {
-    console.log('Request Status', response.status)
-    return response.json()
-}).then(films => {
-    content.innerText = formatFilmData(films);
-});
+fetch(API_URL + 'films')
+    .then(response => {
+        return response.json().then(films => {
+            content.innerText = formatFilmData(films);    
+        })
+    }).catch(error => {
+        console.warn('Oops', error)
+        content.innerText = "Could not load Star Wars data :( \n Please contact the webmaster"
+    })
