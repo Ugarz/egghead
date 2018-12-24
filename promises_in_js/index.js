@@ -1,8 +1,7 @@
 const API_URL = 'https://starwars.egghead.training/'
 
 const content = document.getElementById('content')
-
-content.innerText = "Fetching Star Wars data.."
+const spinner = document.getElementById('spinner')
 
 function formatFilmData(films){
     return films
@@ -13,10 +12,23 @@ function formatFilmData(films){
 
 fetch(API_URL + 'films')
     .then(response => {
-        return response.json().then(films => {
-            content.innerText = formatFilmData(films);    
-        })
-    }).catch(error => {
+        if(!response.ok){
+            throw Error('Unsuccessful response')
+        }
+        return response.json()
+            .then(films => {
+                content.innerText = formatFilmData(films);
+                return films;
+            })
+    })
+    .catch(error => {
         console.warn('Oops', error)
-        content.innerText = "Could not load Star Wars data :( \n Please contact the webmaster"
+        content.innerText = "Could not load Star Wars data :( \n Please contact the webmaster";
+        return []
+    })
+    .finally(() => {
+        spinner.remove()
+    })
+    .then(films => {
+        console.log('Seeing films cuz we have returned', films)
     })
