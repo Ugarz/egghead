@@ -27,4 +27,6 @@ Welcome to my sandbox on egghead.
 - [x] [Execute Cleanup Logic in a JavaScript Promise Chain with Promise.prototype.finally()](https://egghead.io/lessons/javascript-execute-cleanup-logic-in-a-javascript-promise-chain-with-promise-prototype-finally)
 - [x] [Create a Rejected Promise in JavaScript with Promise.reject()](https://egghead.io/lessons/javascript-create-a-rejected-promise-in-javascript-with-promise-reject)
 - [x] [Create a Resolved Promise in JavaScript with Promise.resolve()](https://egghead.io/lessons/javascript-create-a-resolved-promise-in-javascript-with-promise-resolve)
-- [ ] [Create a New Promise in JavaScript with the Promise Constructor](https://egghead.io/lessons/javascript-create-a-new-promise-in-javascript-with-the-promise-constructor)
+- [x] [Create a New Promise in JavaScript with the Promise Constructor](https://egghead.io/lessons/javascript-create-a-new-promise-in-javascript-with-the-promise-constructor)
+- [x] [Convert a Callback-Based JavaScript Function to a Promise-Based One](https://egghead.io/lessons/javascript-convert-a-callback-based-javascript-function-to-a-promise-based-one)
+- [ ] [Wait for the Fastest JavaScript Promise to Settle with Promise.race()](https://egghead.io/lessons/javascript-wait-for-the-fastest-javascript-promise-to-settle-with-promise-race)
