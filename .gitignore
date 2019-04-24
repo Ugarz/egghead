@@ -1,1 +1,4 @@
-node_modules/
+vuejs/node_modules/
+learn_typescript/node_modules/
+learn_typescript/.cache/
+learn_typescript/dist/
