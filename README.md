@@ -32,3 +32,10 @@ Welcome to my sandbox on egghead.
 - [x] [Wait for the Fastest JavaScript Promise to Settle with Promise.race()](https://egghead.io/lessons/javascript-wait-for-the-fastest-javascript-promise-to-settle-with-promise-race)
 - [x] [Wait for Multiple JavaScript Promises to Settle with Promise.all()](https://egghead.io/lessons/javascript-wait-for-the-fastest-javascript-promise-to-settle-with-promise-race)
 - [x] [Await a JavaScript Promise in an async Function with the await Operator](https://egghead.io/lessons/javascript-wait-for-the-fastest-javascript-promise-to-settle-with-promise-race)
+
+## Learn TypeScript
+> Up And Running with TypeScript (by John Lindquist)
+
+- [x] [Episode 1 - Setup a TypeScript Project](https://egghead.io/lessons/typescript-setup-a-typescript-project)
+- [x] [Episode 2 - Configure TypeScript for React and JSX](https://egghead.io/lessons/react-configure-typescript-for-react-and-jsx)
+- [ ] [Episode 3 - Understand the TypeScript Compiler AKA tsc](https://egghead.io/lessons/typescript-understand-the-typescript-compiler-aka-tsc)
