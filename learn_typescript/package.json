@@ -4,12 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html",
+    "rs": "rm -rf .cache/ && npm start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/react": "^16.8.14",
+    "@types/react-dom": "^16.8.4",
     "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
